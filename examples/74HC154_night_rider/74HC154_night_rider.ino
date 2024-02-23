@@ -17,8 +17,8 @@ void setup()
   Serial.begin(115200);
   Serial.println();
   Serial.println(__FILE__);
-  Serial.print("LIB_74HC138_VERSION: ");
-  Serial.println(LIB_74HC138_VERSION);
+  Serial.print("LIB_74HC154_VERSION: ");
+  Serial.println(LIB_74HC154_VERSION);
 
   selector.enable();
 }
