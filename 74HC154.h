@@ -105,13 +105,13 @@ private:
   uint8_t _enable = 255;
   uint8_t _line = 0;
 
-  void _setLine()
-  {
-    digitalWrite(_pin[0], _line & 0x01);
-    digitalWrite(_pin[1], _line & 0x02);
-    digitalWrite(_pin[2], _line & 0x04);
-    digitalWrite(_pin[3], _line & 0x08);
-  }
+void _setLine()
+{
+  digitalWrite(_pin[0], (_line >> 0) & 0x01);
+  digitalWrite(_pin[1], (_line >> 1) & 0x01);
+  digitalWrite(_pin[2], (_line >> 2) & 0x01);
+  digitalWrite(_pin[3], (_line >> 3) & 0x01);
+}
 
 /*
   uint8_t getLine()
